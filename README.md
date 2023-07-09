@@ -3,7 +3,7 @@
 
 ### Interface
 
-> Interface Define the shape and structure of objects or variables,
+> Interface Define the shape and structure of objects or variables.
 
 ```javascript
 interface InterfaceUserBase {
@@ -44,7 +44,7 @@ type TypeUserProfile = TypeUserBase & { followers: number };
 
 ### Never
 
-> never represents values that will never occur or be reached.
+> never type represents values that will never occur or be reached during the execution of a program.
 
 ```javascript
 const neverValue: never = (() => {
@@ -97,7 +97,7 @@ const UserBase: Array<User> = [
 
 ### Index Signatures
 
-> Index Signatures allow to write key with demand type
+> Index Signatures allow to write key with demand type.
 
 ```javascript
 type TypeArray = {
@@ -107,7 +107,7 @@ type TypeArray = {
 
 ### Union
 
-> Intersection type combine together types and create single type
+> Intersection type combine together types and create single type.
 
 ```javascript
 type TypeUnion = UserBase | UserProfile;
@@ -115,7 +115,7 @@ type TypeUnion = UserBase | UserProfile;
 
 ### Intersection
 
-> Union type describes a value that can be one of several types
+> Union type describes a value that can be one of several types.
 
 ```javascript
 type TypeIntersection = UserBase & UserProfile;
