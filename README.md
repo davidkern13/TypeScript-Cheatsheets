@@ -42,6 +42,29 @@ type TypeUserBase = {
 type TypeUserProfile = TypeUserBase & { followers: number };
 ```
 
+### never
+
+> never represents values that will never occur or be reached.
+
+```javascript
+const neverValue: never = (() => {
+  throw new Error("This should never happen!");
+})();
+```
+
+### void
+
+> void is a type indicating the absence of a return value.
+
+```javascript
+const voidMethod = () => {
+  console.log("Hello, world!");
+}
+
+const result = void voidMethod();
+// Output: undefined
+```
+
 ### Array
 
 > Array of objects can be represented as array of premitives, objects and .etc or generic type.
@@ -123,7 +146,8 @@ type DataType = typeof data;
 
 > Conditional types allow you to create types based on conditions.
 > Extends is used for type constraint and inheritance in TypeScript.
-
+> Evaluates to boolean if the type T is an string.
+ 
 ```javascript
 type Data<T> = T extends string ? boolean : number;
 
@@ -132,6 +156,18 @@ type ResultA = Data<string>;
 
 type ResultB = Data<number>;
 // ResultB is number
+```
+
+> Evaluates to never if the type T[] is an empty array.
+
+```javascript
+type Array<T> = T[] extends [] ? never : T[];
+
+type ArrayCheck = Array<string>;
+// ArrayCheck is string[]
+
+type NonArrayCheck = Array<string | number>;
+// NonArrayCheck is never
 ```
 
 ### Indexed access
