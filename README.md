@@ -42,7 +42,7 @@ type TypeUserBase = {
 type TypeUserProfile = TypeUserBase & { followers: number };
 ```
 
-### never
+### Never
 
 > never represents values that will never occur or be reached.
 
@@ -52,7 +52,7 @@ const neverValue: never = (() => {
 })();
 ```
 
-### void
+### Void
 
 > void is a type indicating the absence of a return value.
 
@@ -193,7 +193,7 @@ const name: NameType = "Kern";
 
 > Mapped types in TypeScript transform or create new types based on existing types.
 
-### keyof operator
+### Keyof operator
 
 > keyof is used to get the union of keys from an object type.
 
@@ -207,7 +207,7 @@ type UserBaseKeys = keyof UserBase;
 // UserBaseKeys is "name" | "age" 
 ```
 
-### in operator 
+### In operator 
 
 > k in obj in TypeScript iterates over object keys for operations or creating new types.
 
@@ -218,7 +218,7 @@ type FromIndex = {
 };
 ```
 
-### in keyof operator
+### In keyof operator
 
 > in keyof is a construct used to iterate over the keys of an object type.
 > It allows you to add or define new types based on those keys.
