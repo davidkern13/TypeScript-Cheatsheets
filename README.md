@@ -298,3 +298,6 @@ type User = {
   data: [];
 };
 
+type UserInfo = Omit<User, 'data'>;
+// UserInfo is { name: string; age: number; }
+```
