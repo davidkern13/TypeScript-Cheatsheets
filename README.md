@@ -233,6 +233,14 @@ interface GenericListInterface<T> {
 }
 ```
 
+> Generic method 
+
+```javascript
+const genericMethod = <T>(data: T): T => {
+  return data;
+};
+```
+
 > Extends keyof is used to constrain a generic type to specific object keys.
 
 ```javascript
