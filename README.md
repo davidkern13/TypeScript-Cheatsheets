@@ -71,18 +71,20 @@ const result = void voidMethod();
 
 ```javascript
 type TypeArray: string[] = ['string', 'string'];
+```
 
+```javascript
+type TypeArray: Array<string> = ['string', 'string'];
+```
+
+```javascript
 type TypeUserBase = {
   username: string;
   age: number;
 }[];
 ```
 
-OR
-
 ```javascript
-type TypeArray: Array<string> = ['string', 'string'];
-
 type User = {
     username: string,
     age: number
