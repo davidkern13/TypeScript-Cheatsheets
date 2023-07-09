@@ -216,6 +216,8 @@ type Index = "a" | "b" | "c";
 type FromIndex = {
   [K in Index]: number
 };
+
+//FromIndex is {a: number;b: number;c: number;};
 ```
 
 ### In keyof operator
