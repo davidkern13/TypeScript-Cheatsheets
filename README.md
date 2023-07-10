@@ -302,9 +302,9 @@ console.log(ageValue); // Output: 30
 
 ## Utils
 
-### ReturnType
+### ReturnType<Type>
 
-> ReturnType in TypeScript retrieves the return type of a function.
+> ReturnType extracts the return type of a function Type.
 
 ```javascript
 type Method = () => boolean;
