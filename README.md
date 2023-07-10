@@ -320,7 +320,7 @@ type FetchDataReturnType = ReturnType<AsyncFunc>;
 // FetchDataReturnType is Promise<number>
 ```
 
-### Pick
+### Pick<Type, Keys>
 
 > Pick utility creates a new type by selecting specific properties from a given type.
 
@@ -335,7 +335,7 @@ type UserInfo = Pick<User, 'name' | 'age'>;
 // UserInfo is { name: string; age: number; }
 ```
 
-### Omit
+### Omit<Type, Keys>
 
 > Omit utility creates a new type by excluding specified properties from an existing type.
 
@@ -348,4 +348,93 @@ type User = {
 
 type UserInfo = Omit<User, 'data'>;
 // UserInfo is { name: string; age: number; }
+```
+
+### Awaited<Type>
+
+> Awaited utility extracts the resolved type from a Promise or async function.
+
+```javascript
+const fetchData = async (): Promise<string> => {
+  return "Hello, world!";
+}
+
+type ResolvedData = Awaited<ReturnType<typeof fetchData>>;
+// ResolvedData is string
+```
+
+### Partial<Type>
+
+> Partial creates a new type with all properties optional in Type.
+
+```javascript
+interface User {
+  name: string;
+  email: string;
+}
+
+type PartialUser = Partial<User>;
+
+const user: PartialUser = {
+  name: "David",
+};
+
+// Output: { name: "David" }
+```
+
+### Required<Type>
+
+> Required creates a new type with all properties required in Type.
+
+```javascript
+interface User {
+  name?: string;
+  age?: number;
+  email?: string;
+}
+
+type RequiredUser = Required<User>;
+
+const user: RequiredUser = {
+  name: "David",
+  age: 30,
+  email: "david@example.com",
+};
+
+// Output: { name: "David", age: 30, email: "david@example.com" }
+```
+
+### Readonly<Type>
+
+> Readonly creates a new type with all properties as read-only in Type.
+
+```javascript
+interface User {
+  name: string;
+  age: number;
+}
+
+type ReadonlyUser = Readonly<User>;
+
+const user: ReadonlyUser = {
+  name: "David",
+  age: 30,
+};
+
+user.name = "Kern"; // Error: Cannot assign to 'name' because it is a read-only property
+
+// Output: { name: "David", age: 30 }
+```
+
+### InstanceType<Type>
+
+> InstanceType utility extracts the instance type from a constructor function.
+
+```javascript
+class MyClass {
+  name: string;
+}
+
+type MyInstance = InstanceType<typeof MyClass>;
+// MyInstance is the type representing an instance of MyClass
 ```
