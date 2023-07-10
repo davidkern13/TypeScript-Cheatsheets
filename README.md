@@ -320,7 +320,7 @@ type FetchDataReturnType = ReturnType<AsyncFunc>;
 // FetchDataReturnType is Promise<number>
 ```
 
-### Pick<Type, Keys>
+### ```Pick<Type, Keys>```
 
 > Pick utility creates a new type by selecting specific properties from a given type.
 
@@ -335,7 +335,7 @@ type UserInfo = Pick<User, 'name' | 'age'>;
 // UserInfo is { name: string; age: number; }
 ```
 
-### Omit<Type, Keys>
+### ```Omit<Type, Keys>```
 
 > Omit utility creates a new type by excluding specified properties from an existing type.
 
@@ -350,7 +350,7 @@ type UserInfo = Omit<User, 'data'>;
 // UserInfo is { name: string; age: number; }
 ```
 
-### Awaited<Type>
+### ```Awaited<Type>```
 
 > Awaited utility extracts the resolved type from a Promise or async function.
 
@@ -363,7 +363,7 @@ type ResolvedData = Awaited<ReturnType<typeof fetchData>>;
 // ResolvedData is string
 ```
 
-### Partial<Type>
+### ```Partial<Type>```
 
 > Partial creates a new type with all properties optional in Type.
 
@@ -382,7 +382,7 @@ const user: PartialUser = {
 // Output: { name: "David" }
 ```
 
-### Required<Type>
+### ```Required<Type>```
 
 > Required creates a new type with all properties required in Type.
 
@@ -404,7 +404,7 @@ const user: RequiredUser = {
 // Output: { name: "David", age: 30, email: "david@example.com" }
 ```
 
-### Readonly<Type>
+### ```Readonly<Type>```
 
 > Readonly creates a new type with all properties as read-only in Type.
 
@@ -426,7 +426,7 @@ user.name = "Kern"; // Error: Cannot assign to 'name' because it is a read-only 
 // Output: { name: "David", age: 30 }
 ```
 
-### InstanceType<Type>
+### ```InstanceType<Type>```
 
 > InstanceType utility extracts the instance type from a constructor function.
 
