@@ -322,7 +322,7 @@ type FetchDataReturnType = ReturnType<AsyncFunc>;
 
 ### Pick
 
-> Pick is a utility type that selects specific properties from a given type.
+> Pick utility creates a new type by selecting specific properties from a given type.
 
 ```javascript
 type User = {
@@ -337,7 +337,7 @@ type UserInfo = Pick<User, 'name' | 'age'>;
 
 ### Omit
 
-> Omit utility type in TypeScript creates a new type by excluding specified properties from an existing type.
+> Omit utility creates a new type by excluding specified properties from an existing type.
 
 ```javascript
 type User = {
