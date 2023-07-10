@@ -302,7 +302,7 @@ console.log(ageValue); // Output: 30
 
 ## Utils
 
-### ReturnType<Type>
+### ```ReturnType<Type>```
 
 > ReturnType extracts the return type of a function Type.
 
