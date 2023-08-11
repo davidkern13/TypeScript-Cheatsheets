@@ -25,7 +25,7 @@ interface InterfaceUserProfile extends InterfaceUserBase {
 
 ### Type
 
-> Type Define the shape and structure of objects or variables.
+> Type Define the shape and structure of objects, variables, union, intersection, mapped.
 
 ```javascript
 type TypeUserBase = {
